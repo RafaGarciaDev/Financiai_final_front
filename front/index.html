@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanciAi - Simulação de Financiamentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>FinanciAi</h1>
+    </header>
+    <main>
+        <section id="cadastro-cliente">
+            <h2>Cadastrar Cliente</h2>
+            <form id="form-cliente">
+                <input type="text" id="nome" placeholder="Nome" required>
+                <input type="text" id="cpf" placeholder="CPF (XXX.XXX.XXX-XX)" required>
+                <input type="number" id="renda" placeholder="Renda Mensal (R$)" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p id="resposta-cliente"></p>
+        </section>
+
+        <section id="simulacao">
+            <h2>Simular Financiamento</h2>
+            <form id="form-simulacao">
+                <input type="text" id="cpf-simulacao" placeholder="CPF do Cliente" required>
+                <input type="number" id="valor-imovel" placeholder="Valor do Imóvel (R$)" required>
+                <select id="tipo-amortizacao" required>
+                    <option value="">Selecione o tipo</option>
+                    <option value="PRICE">Price</option>
+                    <option value="SAC">SAC</option>
+                </select>
+                <button type="submit">Simular</button>
+            </form>
+            <div id="resultado-simulacao"></div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
